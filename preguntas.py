@@ -57,7 +57,6 @@ def pregunta_02():
 
     # Importe el transformador OrdinalEncoder
     from sklearn.preprocessing import OrdinalEncoder
-    OrdinalEncoder = OrdinalEncoder(categories="auto", dtype=np.float64,)
 
     # Transforme las variables de entrada usando fit_transform
     X = OrdinalEncoder().fit_transform(X)
@@ -67,7 +66,7 @@ def pregunta_02():
     
 
     # Cree un un clasificador k-NN con 6 vecinos
-    knn = KNeighborsClassifier(n_neighbors=6)
+    knn = KNeighborsClassifier(n_neighbors=5)
 
     # Entrene el clasificador con el conjunto de entrenamiento
     knn.fit(X, y)
